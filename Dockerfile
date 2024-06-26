@@ -17,5 +17,6 @@ RUN composer install
 RUN php artisan storage:link
 #RUN php artisan config:cache
 RUN php artisan optimize:clear
+RUN php artisan key:generate
 
 CMD php artisan serve --host=0.0.0.0 --port=8181
